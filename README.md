@@ -1,1 +1,1 @@
-# squirrel
+# Ejercicio 6 - Squirrel
