@@ -8,9 +8,9 @@ var numSquirrel = 0;
 
 function mostrarData(array)
 {
-    var x = 0;
     for(let i = 0; i < array.length; i++)
     {
+        numFilas = array.length;
         var events;
         var squirrel;
 
@@ -47,15 +47,13 @@ function mostrarData(array)
             {
                 if(squirrel == false) {yaExiste.setFn();}
                 else {yaExiste.setTp();}
-                listaEvents[yaExiste.getId] = yaExiste;
             }
             else
             {
-                var nuevo = new Event(x, events[j]);
+                var nuevo = new Event(events[j]);
                 if(squirrel == false) {nuevo.setFn();}
                 else {nuevo.setTp();}
                 listaEvents.push(nuevo);
-                x++;
             }
         }
 
@@ -74,7 +72,6 @@ function mostrarData(array)
 
          const tabla1 = document.querySelector(".tabla1");
          tabla1.appendChild(fila);
-         numFilas++;
     }
 
     function compare(a, b) 
@@ -114,23 +111,16 @@ function mostrarData(array)
         tabla2.appendChild(fila);
     }
 }
-
 class Event
 {
-    constructor(id, name)
+    constructor(name)
     {
-        this.id = id;
         this.name = name;
         this.tp = 0;
         this.tn = 0;
         this.fp = 0;
         this.fn = 0;
         this.mcc = 0;
-    }
-
-    get getId() 
-    {
-        return this.id;
     }
   
     get getName() 
