@@ -18,7 +18,7 @@ function mostrarData(array)
 
         const idFila = document.createElement("th");
         idFila.scope = "row";
-        idFila.textContent = (i+1) + "";
+        idFila.textContent = (i+1);
 
         const eventsFila = document.createElement("td");
 
@@ -58,7 +58,7 @@ function mostrarData(array)
         }
 
         const columnaSquirrel = document.createElement("td");
-        columnaSquirrel.textContent = squirrel + "";
+        columnaSquirrel.textContent = squirrel;
 
         if (squirrel == true) 
         {
@@ -95,7 +95,7 @@ function mostrarData(array)
 
         const idFila = document.createElement("th");
         idFila.scope = "row";
-        idFila.textContent = (i+1) + "";
+        idFila.textContent = (i+1);
 
         const event = document.createElement("td");
         event.textContent = listaEvents[i].getName;
